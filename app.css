@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --dark-blue:hsl(233, 47%, 7%);
+    --desaturated-blue:hsl(244, 38%, 16%);
+    --accent-color:hsl(277, 64%, 61%);
+}
+
+body{
+    width:100%;
+    height:100%;
+    background: var(--dark-blue);
+    font-size:15px;
+    font-family: "Inter", "Lexend Deca", sans-serif;
+    color:hsl(0, 0%, 100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--desaturated-blue);
+    width: 85%;
+    
+    max-width: 1305px;
+    min-height: 480px;
+    border-radius:10px;
+}
+
+.card span{
+    color:var(--accent-color);
+}
+
+
+.content{
+    width:50%;
+    height:75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 11% 0px 6%;
+}
+
+.content h1{
+    font-size:2.7em;
+    margin-bottom:6%;
+}
+
+.content p{
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.mainText{
+    width:100%;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20%;
+    width: 100%;
+}
+
+.numbers h2{
+    font-size: 1.8em;
+    margin-bottom: 0.24em;
+    
+}
+
+.numbers p {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    color:hsla(0, 0%, 100%, 0.75);
+    width:100%;
+}
+
+.image{
+background:url(images/image-header-desktop.jpg) hsl(277, 64%, 61%);
+background-size: cover;
+background-blend-mode: multiply;
+width:50%;
+min-height: 480px;
+border-radius:0 10px 10px 0;
+}
+
+
+
+@media (max-width: 1080px ){
+    html{
+        height: inherit;
+    }
+    body{
+        margin:5em 0;
+        }
+.content{
+    width: 100%;
+    text-align: center;
+}
+
+.content h1{
+    margin-bottom: 5%;
+}
+.card{
+    height: auto;
+    flex-direction: column-reverse;
+}
+.image{
+    width:100%;
+    min-height:250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.mainText{
+    padding-top: 3em;
+}
+.numbers{
+    flex-direction: column;
+    margin-top: 11%;
+}
+
+.number{
+    margin-bottom: 2em;
+}
+
+}
+
+@media (max-width:375px){
+    .content h1{
+        font-size: 1.8em;
+    }
+
+    .content p{
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+
+    .content h1{
+    margin-bottom: 5%;
+    }
+    .numbers{
+        margin-top: 15%;
+    }
+    .numbers h2{
+        font-size: 1.5em;
+    }
+    .numbers p {
+        font-size: 0.7em;
+    }
+}
